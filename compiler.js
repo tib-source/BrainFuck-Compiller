@@ -1,12 +1,12 @@
 const syntax = document.querySelector("input[type='text']")
 const output = document.querySelector("#output")
 const compile = document.querySelector("input[type='submit']")
-
+syntax.value = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
 compile.addEventListener("click", event => {
     event.preventDefault()
     if (syntax.value.length > 0){
         input = prompt("provide an input - if any")
-        brainfuck(syntax.value, input)
+        brainFuck(syntax.value, input)
     }else{
         alert("please provide a brainfuck code")
     }
