@@ -12,7 +12,8 @@ compile.addEventListener("click", event => {
 })
 
 
-function brainfuck(code){
+function brainLuck(code,input){
+    input  = input.split("").map(e=> e.charCodeAt(0)).reverse()
     code = code.split("")
     let memory = new Array(1000).fill(0)
     let returns = []
@@ -30,10 +31,6 @@ function brainfuck(code){
     });
     while(codeptr < code.length){
         let curr = code[codeptr]
-        if(typeof curr == undefined){
-            run=false
-            break
-        }
         switch(curr){
             case "<":
                 ptr--
@@ -45,11 +42,13 @@ function brainfuck(code){
                 break
             case "+":
                 memory[ptr]++
+                if(memory[ptr]>255){memory[ptr]=0}
                 codeptr++
                 // add byte wrappign behaviour 
                 break
             case "-":
                 memory[ptr]--
+                if(memory[ptr]<0){memory[ptr]=255}
                 codeptr++
                 break
             case ".":
@@ -71,11 +70,10 @@ function brainfuck(code){
                 }
                 break
             case ",":
-                memory[ptr] = prompt("input")
+                memory[ptr] = input.pop()
                 codeptr++
                 break
         }
     } 
-    
     output.innerText = returns.map(e=> String.fromCharCode(e)).join("")
 }
