@@ -1,1 +1,79 @@
-"<html>" 
+@import url('https://fonts.googleapis.com/css2?family=Frijole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: "Frijole", sans-serif;
+    background-color: #00ffa5;
+}
+
+.container{
+    background-color: antiquewhite;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.header{
+    background-color: royalblue;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-bottom:2px solid springgreen;
+}
+form{
+    width: 80%;
+}
+input[type="text"]{
+    width: 75%;
+    height: 30px;
+    border-radius: 0em 1em 1em 0 ;
+    outline: none;
+    font-family: monospace;
+    padding: 1em 1.5em 1em 0.5em;
+}
+input[type="submit"]{
+    height: 31px;
+    font-family: "Poppins";
+    font-weight: 700;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -20px;
+}
+.body{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#output{
+    width: 80%;
+    height: 40%;
+    border: 3px rgb(97, 87, 87) solid;
+    background-color: rgb(255, 254, 254);
+    color: black;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
