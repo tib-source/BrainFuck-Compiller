@@ -5,14 +5,15 @@ const compile = document.querySelector("input[type='submit']")
 compile.addEventListener("click", event => {
     event.preventDefault()
     if (syntax.value.length > 0){
-        brainfuck(syntax.value)
+        input = prompt("provide an input - if any")
+        brainfuck(syntax.value, input)
     }else{
         alert("please provide a brainfuck code")
     }
 })
 
 
-function brainLuck(code,input){
+function brainFuck(code,input){
     input  = input.split("").map(e=> e.charCodeAt(0)).reverse()
     code = code.split("")
     let memory = new Array(1000).fill(0)
